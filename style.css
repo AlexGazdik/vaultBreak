@@ -1,0 +1,37 @@
+body{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fcovers%2Fimages%2F001%2F270%2F931%2Flarge%2Fdana-klaren-bankvault2031-60.jpg%3F1443372665&f=1&nofb=1");
+
+}
+
+
+.gridborder{
+    border: ridge 30px peru;
+    box-shadow:  10px 10px 10px black;
+}
+.grid {
+    height:min-content;
+    width: min-content;
+    display: grid;
+    grid-template-rows: repeat(6, 5vw);
+    grid-template-columns: repeat(6, 5vw);
+    background-color: grey;
+    padding: 7px;
+    margin-top: 10%;
+    margin-left: 10%;
+    position:relative;
+    left:23%;
+}
+.grid-box{
+    margin: 7px;
+    background-color: black;
+    border-radius: 10%;
+}
+button {
+    position: relative;
+    margin-top:20px;
+    margin-left: 47%;
+    padding: 5px;
+    background-color: gray;
+    font-size: large;
+
+}
