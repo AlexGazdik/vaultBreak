@@ -1,26 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-    background-color: white;
-}
+    background-color: darkslategray;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+  }
+  
+  .nav a {
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 25px;
+    font-family:"Bebas Neue", cursive;
+  }
+  .nav a:hover {
+    color: #fff;
+    tansition: 0.4s;
+  }
+  
+  .nav .close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-left: 50px;
+    font-size: 30px;
+  }
+  
+  .slide a {
+    color: #000;
+    font-size: 36px;
+  }
+  
+  #content {
+    padding: 20px;
+    transition: margin-left 0.7s;
+    overflow: hidden;
+  }
+  
+  #text {
+    width: 90%;
+    padding: 5%;
+  }
 
 
-h1 {
+.title {
     font-family:"Bebas Neue", cursive;
     margin-bottom: 5px;
-    font-size: 10vw;
+    font-size: 7vw;
     color:darkslategray;
     text-align: center;
-    text-shadow: 10px 10px 10px black ;
-}
-.title {
+    width: 25vw;
+    border-style: solid;
+    border-color: rgb(59, 58, 58);
+    background-color: #000;
+    padding: .1vw;
     position: relative;
-    right: 22px;
-    margin-top: 10px;
-    
+    left: 36.5vw   ;
+    bottom: 3.2vw;
+    box-shadow: 5px 5px 5px black; 
+    cursor: pointer;
 }
 
 .gridborder{
+    border-style: solid;
+    border-color: rgb(59, 58, 58);
     box-shadow:  10px 10px 10px black;
 }
 .grid {
@@ -30,28 +89,38 @@ h1 {
     display: grid;
     grid-template-rows: repeat(6, 5vw);
     grid-template-columns: repeat(6, 5vw);
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.freeimages.com%2Fimages%2Flarge-previews%2F3a5%2Fsilver-texture-1182029.jpg&f=1&nofb=1");
+    background-image:url("/vaultBG.jpg");
     background-repeat: no-repeat ;
+    background-position:bottom;
     padding: 7px;
-    margin-top: 1px;
+    margin-top: .1px;
     margin-left: 10%;
     position:relative;
     left:23%;
+    bottom: 2vw
 }
 .grid-box{
     margin: 7px;
     background-color: black;
     border-radius: 10%;
 }
-footer {
-}
-button {
-    position: relative;
-    margin-top:30px;
-    margin-left: 45%;
-    padding: 7px;
-    background-color: gray;
-    font-size: large;
-    box-shadow: 10px 10px 10px black;
 
+.submit {
+    border-style: solid;
+    border-color: rgb(65, 63, 63);
+    position: relative;
+    left: 39.4vw;
+    bottom: .7vw;
+    padding: 1;
+    color:darkslategray;
+    background-color: black;
+    font-size:3vw;
+    font-family:"Bebas Neue", cursive;
+    box-shadow: 10px 10px 10px black;
+    cursor: pointer;
+
+}
+@keyframes bgfade {
+    from {background-color: black;};
+    to {background-image: url("/vaultBG.jpg");}
 }

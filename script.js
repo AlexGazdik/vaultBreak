@@ -1,6 +1,21 @@
 // create an object from grid
 const grid = Array.from(document.getElementsByClassName("grid-box"))
-const elem = document.getElementById("strobe");
+
+refresh = () => {
+    location.reload();
+}
+// Navbar open/close
+function openSlideMenu () {
+    document.getElementById('menu').style.width = '250px';
+    document.getElementById('content').style.marginLeft = '250px';
+  }
+  
+  function closeSlideMenu () {
+    document.getElementById('menu').style.width = '0';
+    document.getElementById('content').style.marginLeft = '0';
+  }
+
+
 // create an a random array for white squares
 for (var a=[],i=0;i<36;++i) a[i]=i;
 shuffle = (array) => {
@@ -35,15 +50,12 @@ const blackOut = () => {
         v.style.backgroundColor = 'black'
     })
 }
-const strobeReset = new Promise((resolve, reject) => { 
-    (elem.style.backgroundColor == "white") ? elem.style.backgroundColor = "black" : elem.style.backgroundColor = "white";
-    }
- 
+
 // set timeout for 7000ms before running blackout function
 setTimeout(blackOut, 4000)
 
 // button triggered function that compares user entry map to randomly generated startmap and alerts if the two are equal(win) or unequal(lose), wait 3 seconds and reset game
-onClick = () => {
+submitSelection = () => {
     const gridState = Array.from(document.getElementsByClassName('grid-box'))
     const mapGrid = []
     gridState.forEach(v => {
@@ -55,10 +67,7 @@ onClick = () => {
         alert("VAULT UNLOCKED")
         setTimeout(location.reload(), 3000)
     }else {
-        strobeBackground();
-        .then({strobeBackground()});
-        strobeBackground();
-        strobeBackground();
+        alert("Incorrect")
         location.reload();
     }
 }

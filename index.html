@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Document</title>
     </script>
 </head>
-<body id="strobe">
-        <h1 id="output" class="title">The Vault</h1>
+<body> 
+    <div id="main">
+        <div id="content">   
+        <span class="slide">
+          <a href="#" onClick="openSlideMenu()">
+          <i class="fas fa-bars"></i>
+          </a>
+        </span>
+        <div id="menu" class="nav">
+          <a href="#" class="close" onClick="closeSlideMenu()">
+          <i class="fas fa-times"></i>
+          </a>
+          <a href="#">High Score</a>
+          <a href="#">Theme</a>
+          <a href="#">Login</a>
+        </div>
+      </div>
+        <button class="title" onclick="refresh()">The Vault</button>
         <div class="grid gridborder">
             <div id="one_one" class="grid-box"></div> 
             <div id="one_two" class="grid-box"></div>
@@ -48,7 +65,9 @@
             <div id="five_four" class="grid-box"></div>
             <div id="five_five" class="grid-box"></div>
         </div>
-        <button onclick="onClick()">SUBMIT</button>
+        <button class="submit" onclick="submitSelection()">SUBMIT SELECTION</button>
+        </div>
+      </body>
     <script src="script.js"></script>
 </body>
 </html>
