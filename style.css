@@ -14,7 +14,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: darkslategray;
     opacity: 0.9;
     overflow-x: hidden;
     padding-top: 60px;
@@ -25,13 +25,17 @@ body {
     display: block;
     padding: 20px 30px;
     text-decoration: none;
-    color: #ccc;
+    color: black;
     font-size: 25px;
     font-family:"Bebas Neue", cursive;
   }
   .nav a:hover {
-    color: #fff;
-    tansition: 0.4s;
+    color: white;
+    transition: 0.7s;
+  }
+  .slide a:hover {
+    color: white;
+    transition: 0.7s;
   }
   
   .nav .close {
@@ -49,7 +53,7 @@ body {
   
   #content {
     padding: 20px;
-    transition: margin-left 0.7s;
+    transition: margin-left .7s;
     overflow: hidden;
   }
   
@@ -71,15 +75,19 @@ body {
     background-color: #000;
     padding: .1vw;
     position: relative;
-    left: 36.5vw   ;
+    left: 36.3vw   ;
     bottom: 3.2vw;
     box-shadow: 5px 5px 5px black; 
     cursor: pointer;
 }
+.title:hover {
+  color: white;
+  transition: .7s;
+}
 
 .gridborder{
     border-style: solid;
-    border-color: rgb(59, 58, 58);
+    border-color: rgb(37, 37, 37);
     box-shadow:  10px 10px 10px black;
 }
 .grid {
@@ -92,7 +100,7 @@ body {
     background-image:url("/vaultBG.jpg");
     background-repeat: no-repeat ;
     background-position:bottom;
-    padding: 7px;
+    padding: .3vw;
     margin-top: .1px;
     margin-left: 10%;
     position:relative;
@@ -100,18 +108,22 @@ body {
     bottom: 2vw
 }
 .grid-box{
-    margin: 7px;
+    margin: .3vw;
     background-color: black;
     border-radius: 10%;
+}
+.grid-box:hover {
+  background-color: white;
+  transition: .2s;
 }
 
 .submit {
     border-style: solid;
     border-color: rgb(65, 63, 63);
     position: relative;
-    left: 39.4vw;
-    bottom: .7vw;
-    padding: 1;
+    left: 39.5vw;
+    bottom: .6vw;
+    padding: 1vw;
     color:darkslategray;
     background-color: black;
     font-size:3vw;
@@ -119,6 +131,10 @@ body {
     box-shadow: 10px 10px 10px black;
     cursor: pointer;
 
+}
+.submit:hover {
+  color: white;
+  transition: .7s;
 }
 @keyframes bgfade {
     from {background-color: black;};
