@@ -1,6 +1,6 @@
 // create an object from grid
 const grid = Array.from(document.getElementsByClassName("grid-box"))
-const startMap = (new Array(40).fill().map((a, i) => a = i).sort(() => Math.random() - 0.5)).slice(0,5);
+const startMap = (new Array(36).fill().map((a, i) => a = i).sort(() => Math.random() - 0.5)).slice(0,5);
 
 refresh = () => {
     location.reload();
